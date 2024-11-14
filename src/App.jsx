@@ -1,21 +1,20 @@
-import Footer from "./components/Footer";
-import Greet from "./components/Greet";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import User from "./components/User";
+import Buttons from "./components/Buttons";
+import Navigation from "./Navigation/Nav";
+import Products from "./Products/Products";
+import Recommended from "./Recommended/Recommended";
+import Category from "./Sidebar/Category/Category";
+import Colours from "./Sidebar/Colors/Colours";
+import Price from "./Sidebar/Price/Price";
 
 function App(){
-  const myName = "Hudkjk";
   return (
     <div>
-      <Header/>
-      <Main/>
-      <Footer/>
-      <Greet/>
-      <p>my name is {myName}</p>
-      <p>my friends List: {["Alex", " hgndg", " paras"]}</p>
-      <p>2+2 = {2+2}</p>
-      <User name = "Bibek Upreti"/>
+      <Navigation/>
+      <Products/>
+      <Recommended/>
+      <Category/>
+      <Colours/>
+      <Price/>
     </div>
   )
 }
