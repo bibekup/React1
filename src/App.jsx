@@ -1,21 +1,34 @@
-import Buttons from "./components/Buttons";
+import { useState } from "react";
 import Navigation from "./Navigation/Nav";
 import Products from "./Products/Products";
 import Recommended from "./Recommended/Recommended";
-import Category from "./Sidebar/Category/Category";
-import Colours from "./Sidebar/Colors/Colours";
-import Price from "./Sidebar/Price/Price";
-
+import Sidebar from "./Sidebar/Sidebar";
+import products from "./db/data";
 function App(){
-  return (
+  const [selectedCategory, setSelectedCategory] = useState(null)
+
+//inputFilter
+const [query, setQuery] = useState("")
+
+const handleInputChange= event => {
+  setQuery(event.target.value)
+}
+
+const filteredItems = products.filter((product) => product.title.toLocaleLowercase().indexOf(query.toLocaleLowerCase() !== -1));
+
+//.........RadioFilter......
+const handleChange = event => {
+  setSelectedCategory(event.target.value)
+}
+
+return (
     <div>
+      <Sidebar/>
       <Navigation/>
-      <Products/>
       <Recommended/>
-      <Category/>
-      <Colours/>
-      <Price/>
+      <Products/>
     </div>
   )
 }
+
 export default App;

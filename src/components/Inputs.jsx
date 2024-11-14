@@ -2,7 +2,10 @@
 
 function Inputs() {
   return (
-    <div>Inputs</div>
+    <label className="sidebar-label-container">
+          <input type="radio" name="test"/>
+          <span className="checkmark"></span>All
+        </label>
   )
 }
 

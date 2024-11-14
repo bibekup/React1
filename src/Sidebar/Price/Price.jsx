@@ -1,7 +1,15 @@
+import Inputs from "../../components/Inputs";
 import "./Price.css"
 function Price () {
   return (
-    <div>Price</div>
+    <div className="ml">
+      <h2 className="sidebar-title price-title">Price</h2>
+      <Inputs/>
+      <Inputs/>
+      <Inputs/>
+      <Inputs/>
+      <Inputs/>
+    </div>
   )
 }
 
