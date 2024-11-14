@@ -13,7 +13,7 @@ function App(){
       <Footer/>
       <Greet/>
       <p>my name is {myName}</p>
-      <p>my friends List: {["Alex", " Naresh", " paras"]}</p>
+      <p>my friends List: {["Alex", " hgndg", " paras"]}</p>
       <p>2+2 = {2+2}</p>
       <User name = "Bibek Upreti"/>
     </div>
